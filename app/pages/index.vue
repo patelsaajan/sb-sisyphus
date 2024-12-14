@@ -7,6 +7,9 @@
         <span class="text-lg-heading">Saajan's Favourites</span>
         <ListFavRecipe />
     </div>
+    <div class="h-screen bg-base w-full">
+        <span>footer</span>
+    </div>
 </template>
 
 <script lang="ts" setup>
