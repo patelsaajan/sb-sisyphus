@@ -25,5 +25,5 @@ logs
 
 # Ignoring pnpm and dino files
 *.dino 
-*.pnpm
+*.yaml
 
