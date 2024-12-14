@@ -3,6 +3,10 @@
         <span class="text-lg-heading text-white">Welcome</span>
         <TodaysRecipe />
     </div>
+    <div class="h-screen bg-white w-full justify-center text-center">
+        <span class="text-lg-heading">Saajan's Favourites</span>
+        <ListFavRecipe />
+    </div>
 </template>
 
 <script lang="ts" setup>
