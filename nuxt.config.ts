@@ -5,5 +5,9 @@ export default defineNuxtConfig({
   future: { 
     compatibilityVersion: 4,
   },
-  modules: ['@nuxt/ui']
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/image',
+  ],
+  image: {}
 })
