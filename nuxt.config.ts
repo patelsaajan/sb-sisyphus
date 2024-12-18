@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/image',
     '@nuxthq/studio',
+    '@nuxt/content',
   ],
   image: {}
 })

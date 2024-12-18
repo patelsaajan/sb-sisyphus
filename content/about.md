@@ -1,3 +1,8 @@
+---
+title: 'This is the title of the page'
+description: 'This is meta data that describes the page'
+
+---
 # About Me
 
 Hello! My name is Alex Johnson, and I am a passionate software developer with a love for creating innovative solutions. With over 10 years of experience in the tech industry, I have honed my skills in various programming languages and frameworks.
