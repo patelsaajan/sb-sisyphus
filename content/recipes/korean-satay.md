@@ -4,7 +4,7 @@ title: "Korean Satay Recipe"
 date: "2023-10-05"
 author: "Saajan Patel"
 category: "Recipes"
-tags: ["Korean", "Satay", "Tofu", "Grilling"]
+tags: ["Korean", "Satay", "Tofu", "Peanut"]
 ---
 
 ## Ingredients
