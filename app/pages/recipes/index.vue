@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-const recipeQuery = queryContent('/recipes/')
+const recipeQuery = await queryContent('/recipes/')
 
 </script>
 
