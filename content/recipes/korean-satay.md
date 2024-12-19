@@ -1,14 +1,12 @@
-# Korean Satay Recipe
-
 ---
-
 title: Korean Satay Recipe 
 date: 2023-10-05 
 author: Saajan Patel
 category: Recipes 
 tags: [Korean, Satay, Tofu, Peanut]
-
 ---
+
+# Korean Satay Recipe
 
 ## Ingredients
 

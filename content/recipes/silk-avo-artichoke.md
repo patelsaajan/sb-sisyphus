@@ -1,5 +1,3 @@
-# Silk Avo Artichoke
-
 ---
 title: "Gucaa"
 date: "2023-10-05"
@@ -7,6 +5,8 @@ author: "Saajan Patel"
 category: "Recipes"
 tags: ["Korean", "Satay", "Tofu", "Grilling"]
 ---
+
+# Silk Avo Artichoke
 
 ## Introduction
 Welcome to the Silk Avo Artichoke documentation. This document provides an overview of the project and its components.
