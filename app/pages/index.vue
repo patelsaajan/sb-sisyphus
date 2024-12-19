@@ -1,5 +1,6 @@
 <template>
     <div class="h-screen bg-base flex flex-col justify-center text-center py-5">
+        <NuxtLink to="/recipes">Recipes</NuxtLink>
         <span class="text-lg-heading text-white">Welcome</span>
         <TodaysRecipe />
     </div>
