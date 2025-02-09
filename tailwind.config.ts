@@ -28,7 +28,6 @@ export default <Partial<Config>>{
           DEFAULT: "#1a090d",
           alternative: "#d6c9c9",
         },
-        white: "#d6c9c9",
       },
       typography: {
         DEFAULT: {

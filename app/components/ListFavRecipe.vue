@@ -1,22 +1,47 @@
 <template>
-    <div class="grid grid-cols-12 gap-4">
-    <div 
-        v-for="n in 3" :key="n"
-        class="flex flex-col justify-center items-center rounded-3xl border-4 border-white col-span-4"
+    <UCard
+        :ui="{ 
+            header: 'p-0' 
+        }"
+        @click="openRecipeModal"
     >
-        <FavRecipe/>
-    </div>
-    <div 
-        v-for="n in 2" :key="n"
-        class="flex flex-col justify-center items-center rounded-3xl border-4 border-white col-span-4"
-        :class="{'col-start-3': n === 1}"
-    >
-        <FavRecipe/>
-    </div>
-</div>
+        <template #header>
+            <NuxtImg
+                :src="recipe.image"
+                :alt="recipe.name"
+                class="rounded-t-lg"
+            />
+        </template>
+            <div class="flex flex-col">
+                <span class="text-sub-heading text-secondary">{{ recipe.cuisine }}</span>
+                <span class="text-sub-heading font-bold">{{ recipe.name }}</span>
+                <div class="flex flex-row gap-6">
+                    <span class="flex flex-row items-center gap-x-2"> <Icon name="material-symbols:timer-outline-rounded" size="1.5rem"/>  {{ recipe.preparationTime }} minutes</span>
+                    <span class="flex flex-row items-center gap-x-2 "><Icon name="ic:round-people" size="1.5rem"/>  {{ recipe.servings }} servings</span>
+                </div>
+            </div>
+        <template #footer>
+            <span class="text-sub-heading font-bold">Recipe name</span>
+        </template>
+
+    </UCard>
 </template>
 
 <script lang="ts" setup>
+import { ModalsRecipe } from '#components';
+import type IRecipes from '~~/types/recipes';
+
+const modal = useModal();
+
+const props = defineProps<{
+    recipe: IRecipes;
+}>();
+
+function openRecipeModal(): void {
+    modal.open(ModalsRecipe, {
+        recipe: props.recipe,
+    });
+}
 
 </script>
 

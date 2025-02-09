@@ -1,16 +1,17 @@
 <template>
-        <div class="h-screen flex flex-col text-left justify-center py-5">
+    <div class="container">
+        <div class="flex flex-col text-left justify-center py-20">
             <!-- <NuxtLink to="/recipes">Recipes</NuxtLink> -->
             <TodaysRecipe 
-            :recipe="todaysRecipe"
+                :recipe="todaysRecipe"
             />
         </div>
-        <div class="h-screen bg-white w-full justify-center text-center">
-            <span class="text-lg-heading">Saajan's Favourites</span>
-            <ListFavRecipe />
-        </div>  
-    <div class="h-screen bg-base w-full">
-        <span>footer</span>
+    </div>
+    <div class="flex flex-col bg-white text-black p-10">
+        <span class="text-sub-heading font-bold">Saajan's Favourites</span>
+        <ListFavRecipe 
+        :recipe="todaysRecipe"
+        />
     </div>
 </template>
 
@@ -20,7 +21,7 @@ import type IRecipes from '~~/types/recipes';
 
 const todaysRecipe : IRecipes = {
         name: 'Korean Satay Sauce Tofu',
-        cusine: 'Korean',
+        cuisine: 'Korean',
         description: 'This is a delicious recipe that will make your day special This is a delicious recipe that will make your day special This is a delicious recipe that will make your day special This is a delicious recipe that will make your day special',
         image: '/imgs/default-food.jpg',
         difficulty: 'easy',

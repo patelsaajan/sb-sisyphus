@@ -11,7 +11,7 @@
                 :imgAttrs="{'class': 'w-full h-auto'}"
             />
             <div class="flex flex-col gap-4 mt-4 p-8 text-grey">
-                <span class="text-base text-red-300"> {{ recipe.cusine }} </span>
+                <span class="text-base text-red-300"> {{ recipe.cuisine }} </span>
                 <span class="text-sub-heading text-black"> {{ recipe.name }} </span>
                 <span class="">{{ recipe.description }}</span>
                 <div class="flex flex-row gap-6">
