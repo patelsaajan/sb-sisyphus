@@ -3,7 +3,9 @@
     <span class="text-heading">Recipe of the day</span>
     <span> Discover our handpicked recipe that will make your day special</span>
     <!-- <NuxtLink> -->
-        <div class="grid grid-cols-2 w-full border-4 border-white rounded-xl bg-inherit overflow-hidden">
+        <div 
+            class="grid grid-cols-1 lg:grid-cols-2 w-full border-4 border-white rounded-xl bg-inherit overflow-hidden"
+        >
             <NuxtPicture 
                 format="jpg"
                 src="/imgs/default-food.jpg"
