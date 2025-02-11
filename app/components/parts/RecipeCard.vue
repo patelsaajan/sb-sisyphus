@@ -1,0 +1,55 @@
+<template>
+    <div class="max-w-[400px]">
+        <UCard
+                :ui="{ 
+                    header: 'p-0'
+                    
+                }"
+                @click="openRecipeModal"
+            >
+            <template #header>
+                <NuxtImg
+                    :src="recipe.image"
+                    :alt="recipe.name"
+                    class="rounded-t-lg"
+                />
+            </template>
+                <div class="flex flex-col">
+                    <span class="text-sub-heading text-secondary">{{ recipe.cuisine }}</span>
+                    <span class="text-sub-heading font-bold">{{ recipe.name }}</span>
+                    <div class="flex flex-row gap-6">
+                        <span class="flex flex-row items-center gap-x-2"> <Icon name="material-symbols:timer-outline-rounded" size="1.5rem"/>  {{ recipe.preparationTime }} minutes</span>
+                        <span class="flex flex-row items-center gap-x-2 "><Icon name="ic:round-people" size="1.5rem"/>  {{ recipe.servings }} servings</span>
+                    </div>
+                </div>
+            <template #footer>
+                <span class="text-sub-heading font-bold">Recipe name</span>
+            </template>
+
+        </UCard>
+    </div>
+</template>
+
+<script lang="ts" setup>
+import type IRecipes from '~~/types/recipes';
+import { ModalsRecipe } from '#components';
+
+const modal = useModal();
+
+
+const props = defineProps<{
+    recipe: IRecipes;
+}>();
+
+function openRecipeModal(): void {
+    modal.open(ModalsRecipe, {
+        recipe: props.recipe,
+    });
+}
+
+</script>
+
+<style lang="scss" scoped>
+
+
+</style>

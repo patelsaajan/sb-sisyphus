@@ -8,14 +8,15 @@
         </div>
     </div>
     <div class="flex flex-col bg-white text-black p-10">
-        <span class="text-sub-heading font-bold">Saajan's Favourites</span>
-        <ListFavRecipe 
-        :recipe="todaysRecipe"
+        <RecipeCarousel 
+            title="Saajan's Favourites"
+            :recipe="todaysRecipe"
         />
     </div>
 </template>
 
 <script lang="ts" setup>
+import Recipe from '~/components/modals/recipe.vue';
 import type IRecipes from '~~/types/recipes';
 
 
