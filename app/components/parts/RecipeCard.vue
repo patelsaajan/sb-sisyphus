@@ -14,7 +14,12 @@
                     class="rounded-t-lg"
                 />
             </template>
-                <div class="flex flex-col">
+                <div
+                    class="flex flex-col"
+                    :class="{
+                        'text-black': bgLight,
+                    }"
+                >
                     <span class="text-sub-heading text-secondary">{{ recipe.cuisine }}</span>
                     <span class="text-sub-heading font-bold">{{ recipe.name }}</span>
                     <div class="flex flex-row gap-6">
@@ -39,6 +44,7 @@ const modal = useModal();
 
 const props = defineProps<{
     recipe: IRecipes;
+    bgLight?: boolean;
 }>();
 
 function openRecipeModal(): void {

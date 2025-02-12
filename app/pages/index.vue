@@ -13,6 +13,14 @@
             :recipe="todaysRecipe"
         />
     </div>
+
+    <div class="flex flex-col p-10">
+        <RecipeCarousel 
+            title="Latest Recipes"
+            :recipe="todaysRecipe"
+            :bg-light="true"
+        />
+    </div>
 </template>
 
 <script lang="ts" setup>

@@ -4,7 +4,11 @@
         <ClientOnly>
             <swiper-container ref="carouselRef" class="w-full">
                     <swiper-slide v-for="number in 5" :key="number">
-                        <PartsRecipeCard :recipe="recipe" @click="openRecipeModal"/>
+                        <PartsRecipeCard
+                        :recipe="recipe"
+                        @click="openRecipeModal"
+                        :bgLight="bgLight"
+                    />
                     </swiper-slide>
             </swiper-container>
         </ClientOnly>
@@ -30,15 +34,23 @@ const swiperOptions = {
     // direction: "horizontal",
     navigation: true,
     loop: true,
-    slidesPerView: 3,
-    // breakpoints: {
-	// 	0: {
-	// 		slidesPerView: 2
-	// 	},
-	// 	640: {
-	// 		slidesPerView: 3
-	// 	}
-	// }
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        640: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+        1440: {
+            slidesPerView: 4
+        },
+        1920: {
+            slidesPerView: 5
+        }
+    }
 }
 
 const swiper = useSwiper(carouselRef, swiperOptions)
@@ -46,6 +58,7 @@ const swiper = useSwiper(carouselRef, swiperOptions)
 const props = defineProps<{
     title: string;
     recipe: IRecipes;
+    bgLight?: boolean;
 }>();
 
 function openRecipeModal(): void {
