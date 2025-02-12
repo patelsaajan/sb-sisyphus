@@ -2,7 +2,7 @@
     <span class="text-sub-heading font-bold">{{ title }}</span>
     <div class="w-full gap-4 mt-6">
         <ClientOnly>
-            <swiper-container ref="carouselRef" class="w-full">
+            <swiper-container ref="carouselRef">
                     <swiper-slide v-for="number in 5" :key="number">
                         <PartsRecipeCard
                         :recipe="recipe"
@@ -32,8 +32,8 @@ const swiperOptions = {
     grabCursor: true,
     // mouseWheel: true,
     // direction: "horizontal",
-    navigation: true,
-    loop: true,
+    centeredSlides: true,
+    // loop: true,
     breakpoints: {
         0: {
             slidesPerView: 1

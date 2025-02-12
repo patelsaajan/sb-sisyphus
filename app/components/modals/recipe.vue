@@ -27,9 +27,14 @@
                     <span class="flex flex-row items-center gap-x-2"> <Icon name="material-symbols:timer-outline-rounded" size="1.5rem"/>  {{ recipe.preparationTime }} minutes</span>
                     <span class="flex flex-row items-center gap-x-2 "><Icon name="ic:round-people" size="1.5rem"/>  {{ recipe.servings }} servings</span>
                 </div>
-                <UButton color="primary" class="max-w-fit" @click="visitRecipeClick">
-                    View Full Recipe
-                </UButton>
+                <div class="flex flex-row gap-4">
+                    <UButton color="primary" class="max-w-fit" @click="visitRecipeClick">
+                        View Full Recipe
+                    </UButton>
+                    <UButton color="red" class="max-w-fit" @click="visitBlogClick">
+                        View Blog Post
+                    </UButton>
+                </div>
                 <span class="">{{ recipe.description }}</span>
                 <span class="font-semibold">Ingredients</span>
                 <span class="font-semibold">Instructions</span>
@@ -54,6 +59,9 @@ const props = defineProps({
 })
 
 const visitRecipeClick = () => {
+    console.log('Visit Recipe Clicked');
+}
+const visitBlogClick = () => {
     console.log('Visit Recipe Clicked');
 }
 
