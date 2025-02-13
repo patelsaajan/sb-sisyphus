@@ -7,6 +7,7 @@
                         }"
         >
             <template #header>
+                <Icon name="iconamoon:close" size="2rem" @click="closeModalClick"/>
                 <div class="flex flex-col font-bold gap-y-4 text-center">
                     {{ recipe.name }}
                     <div class="flex justify-center">
@@ -56,11 +57,11 @@
                         </span>
                     </div>
             </div>
-            <!-- <template #footer>
-                <UButton color="primary" class="max-w-fit" @click="visitRecipeClick">
-                    View Full Recipe
+            <template #footer>
+                <UButton color="red" class="w-full justify-center" @click="closeModalClick">
+                    Close
                 </UButton>
-            </template> -->
+            </template>
         </UCard>
     </UModal>    
 </template>
@@ -97,6 +98,10 @@ const visitRecipeClick = () => {
 }
 const visitBlogClick = () => {
     console.log('Visit Recipe Clicked');
+}
+
+const closeModalClick = () => {
+    console.log('Modal Closed')
 }
 
 </script>
