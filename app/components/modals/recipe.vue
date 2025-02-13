@@ -37,13 +37,30 @@
                 </div>
                 <span class="">{{ recipe.description }}</span>
                 <span class="font-semibold">Ingredients</span>
+                <div class="grid grid-cols-2">
+                    <div class="flex flex-col">
+                        <span v-for="(value, key) in ingredients" :key="key">
+                            {{ key }}
+                        </span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span v-for="(value, key) in ingredients" :key="key">
+                            {{ value[0] }} {{ value[1] }}
+                        </span>
+                    </div>
+                </div>
                 <span class="font-semibold">Instructions</span>
+                    <div class="flex flex-col">
+                        <span v-for="( step, index  ) in instructions" :key="index">
+                            {{ index + 1 }}. {{ step }}
+                        </span>
+                    </div>
             </div>
-            <template #footer>
+            <!-- <template #footer>
                 <UButton color="primary" class="max-w-fit" @click="visitRecipeClick">
                     View Full Recipe
                 </UButton>
-            </template>
+            </template> -->
         </UCard>
     </UModal>    
 </template>
@@ -57,6 +74,23 @@ const props = defineProps({
         required: true
     }
 })
+
+const ingredients = {
+    'onion': [1, 'whole'],
+    'tinned-tomatoes': [1, 'tin'],
+    'tofu': [1, 'block'],
+    'soy-sauce': [1, 'tbsp'],
+    'rice-vinegar': [1, 'tbsp'],
+    'sesame-oil': [1, 'tbsp'],
+    'garlic': [2, 'cloves'],
+    'ginger': [1, 'inch'],
+}
+
+const instructions = [
+ 'Press the tofu and take out all the water',
+ 'Dice the onions to small chunks',
+ 'Mince the onion are garlic'
+]
 
 const visitRecipeClick = () => {
     console.log('Visit Recipe Clicked');
