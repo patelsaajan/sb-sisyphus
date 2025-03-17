@@ -1,16 +1,30 @@
 <template>
     <div class="container">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 h-full py-8">
-            <PartsRecipeCard 
-                v-for="n in 12" 
-                :key="n" 
+        <div class="flex flex-col text-left justify-center py-20">
+            <!-- <NuxtLink to="/recipes">Recipes</NuxtLink> -->
+            <TodaysRecipe 
                 :recipe="todaysRecipe"
             />
         </div>
     </div>
+    <div class="flex flex-col bg-white text-black p-10">
+        <RecipeCarousel 
+            title="Saajan's Favourites"
+            :recipe="todaysRecipe"
+        />
+    </div>
+
+    <div class="flex flex-col p-10">
+        <RecipeCarousel 
+            title="Latest Recipes"
+            :recipe="todaysRecipe"
+            :bg-light="true"
+        />
+    </div>
 </template>
 
 <script lang="ts" setup>
+import Recipe from '~/components/modals/recipe.vue';
 import type IRecipes from '~~/types/recipes';
 
 
@@ -27,6 +41,4 @@ const todaysRecipe : IRecipes = {
 </script>
 
 <style lang="scss" scoped>
-
-
 </style>

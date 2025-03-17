@@ -27,9 +27,6 @@
                         <span class="flex flex-row items-center gap-x-2 "><Icon name="ic:round-people" size="1.5rem"/>  {{ recipe.servings }} servings</span>
                     </div>
                 </div>
-            <template #footer>
-                <span class="text-sub-heading font-bold">Recipe name</span>
-            </template>
 
         </UCard>
     </div>

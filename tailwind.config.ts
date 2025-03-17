@@ -22,10 +22,11 @@ export default <Partial<Config>>{
         video: "16 / 9",
       },
       colors: {
-        base: "#7E69AB",
-        secondary: "#2a4494",
+        main: "#5ebec4",
+        secondary: "#f92c85",
+        white: "#fdf5df",
         text: {
-          DEFAULT: "#1a090d",
+          DEFAULT: "#444",
           alternative: "#d6c9c9",
         },
       },
