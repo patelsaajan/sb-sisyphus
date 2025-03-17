@@ -47,9 +47,13 @@ const props = defineProps<{
     bgLight?: boolean;
 }>();
 
-function openRecipeModal(): void {
+function openRecipeModal() {
     modal.open(ModalsRecipe, {
         recipe: props.recipe,
+        onClose: ()  => {    
+            modal.close();
+            console.log('closed');
+        }
     });
 }
 

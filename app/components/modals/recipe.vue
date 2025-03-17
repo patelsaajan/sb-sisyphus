@@ -7,7 +7,18 @@
                         }"
         >
             <template #header>
-                <Icon name="iconamoon:close" size="2rem" @click="closeModalClick"/>
+                <Icon
+                    name="iconamoon:close"
+                    size="2rem"
+                    @click="onClose"
+                    class="cursor-pointer"
+                />
+                <UButton
+                    color="primary"
+                    class="w-full"
+                    @click="onClose">
+                    Close
+                </UButton>
                 <div class="flex flex-col font-bold gap-y-4 text-center">
                     {{ recipe.name }}
                     <div class="flex justify-center">
@@ -58,7 +69,10 @@
                     </div>
             </div>
             <template #footer>
-                <UButton color="red" class="w-full justify-center" @click="closeModalClick">
+                <UButton
+                    color="red"
+                    class="w-full justify-center"
+                    @click="onClose">
                     Close
                 </UButton>
             </template>
@@ -73,7 +87,7 @@ const props = defineProps({
     recipe: {
         type: Object as () => IRecipes,
         required: true
-    }
+    },
 })
 
 const ingredients = {
@@ -100,8 +114,11 @@ const visitBlogClick = () => {
     console.log('Visit Recipe Clicked');
 }
 
-const closeModalClick = () => {
-    console.log('Modal Closed')
+const emit = defineEmits(['close'])
+
+const onClose = () => {
+    console.log('close clicked');
+    emit('close')
 }
 
 </script>
