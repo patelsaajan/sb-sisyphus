@@ -1,7 +1,7 @@
 <template>
     <UModal>
         <UCard
-            class=""
+            class="bg-neutral"
                 :ui = "{ 
                         divide: 'divide-none',
                         }"
@@ -13,12 +13,6 @@
                     @click="onClose"
                     class="cursor-pointer"
                 />
-                <UButton
-                    color="primary"
-                    class="w-full"
-                    @click="onClose">
-                    Close
-                </UButton>
                 <div class="flex flex-col font-bold gap-y-4 text-center">
                     {{ recipe.name }}
                     <div class="flex justify-center">
@@ -40,7 +34,7 @@
                     <span class="flex flex-row items-center gap-x-2 "><Icon name="ic:round-people" size="1.5rem"/>  {{ recipe.servings }} servings</span>
                 </div>
                 <div class="flex flex-row gap-4">
-                    <UButton color="primary" class="max-w-fit" @click="visitRecipeClick">
+                    <UButton variant="solid" color="secondary" class="max-w-fit" @click="visitRecipeClick">
                         View Full Recipe
                     </UButton>
                     <UButton color="red" class="max-w-fit" @click="visitBlogClick">
@@ -68,14 +62,6 @@
                         </span>
                     </div>
             </div>
-            <template #footer>
-                <UButton
-                    color="red"
-                    class="w-full justify-center"
-                    @click="onClose">
-                    Close
-                </UButton>
-            </template>
         </UCard>
     </UModal>    
 </template>

@@ -1,3 +1,4 @@
+import { main } from "nuxi";
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
@@ -22,9 +23,10 @@ export default <Partial<Config>>{
         video: "16 / 9",
       },
       colors: {
-        main: "#5ebec4",
-        secondary: "#f92c85",
-        white: "#fdf5df",
+        main: "#b82601",
+        secondary: "#813772",
+        neutral: "#062f4f",
+        black: "#000",
         text: {
           DEFAULT: "#444",
           alternative: "#d6c9c9",
@@ -42,7 +44,7 @@ export default <Partial<Config>>{
             // 	color: '#f4241d'
             // },
             // 'blockquote': {
-            // 	color: '#383839'
+            color: "#ffffff",
             // }
           },
         },
