@@ -13,9 +13,4 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-swiper",
   ],
-  ui: {
-    theme: {
-      colors: ["primary", "secondary", "tertiary"],
-    },
-  },
 });
