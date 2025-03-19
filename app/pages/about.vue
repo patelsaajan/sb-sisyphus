@@ -1,7 +1,8 @@
 <template>
    <main>
-    <ContentDoc />
-    <h1>hi</h1>
+    <div class="container h-screen">
+      <ContentDoc />
+    </div>
   </main>
 </template>
 
